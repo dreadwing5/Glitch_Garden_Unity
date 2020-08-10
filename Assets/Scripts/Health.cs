@@ -5,6 +5,9 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] float currentHealth = 500f;
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] AudioClip deathSFX;
+    [SerializeField] [Range(0f,1f)] float deathSFXVolume;
 
     public void DealDamage(float damage){
         currentHealth-=damage;
@@ -20,6 +23,8 @@ public class Health : MonoBehaviour
 
     public void Die(){
         Debug.Log("Attacker is Dead!");
+        AudioSource.PlayClipAtPoint(deathSFX,Camera.main.transform.position,deathSFXVolume);
+        GameObject DeathVFX  = Instantiate(deathVFX,transform.position,Quaternion.identity) as GameObject;
         Destroy(gameObject);
     }
    
