@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] float maxHealth = 500f;
-    [SerializeField] float currentHealth = 0;
-    void Start()
-    {
-        currentHealth = maxHealth;
+    [SerializeField] float currentHealth = 500f;
+
+    public void DealDamage(float damage){
+        currentHealth-=damage;
+        if(currentHealth<=0)
+        {
+            Die();
+        }
     }
-    void Update()
-    {
-        
-    }
-    public float UpdateHealth()
-    {
+
+    public float SetHealth(){
         return currentHealth;
     }
+
+    public void Die(){
+        Debug.Log("Attacker is Dead!");
+        Destroy(gameObject);
+    }
+   
 }
