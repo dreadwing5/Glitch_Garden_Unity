@@ -8,7 +8,6 @@ public class AttackerSpawner : MonoBehaviour
     [SerializeField] GameObject attackerPrefab;
     [SerializeField] float maxSpawnDelay = 0f;
     [SerializeField] float minSpawnDelay = 5f;
-    // Start is called before the first frame update
     IEnumerator Start()
     {
         while (spawn)
@@ -19,8 +18,6 @@ public class AttackerSpawner : MonoBehaviour
         }
 
     }
-
-    // Update is called once per frame
     void Update()
     {
 

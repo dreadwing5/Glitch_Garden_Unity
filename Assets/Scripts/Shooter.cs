@@ -5,9 +5,16 @@ using UnityEngine;
 public class Shooter : MonoBehaviour
 {
     [SerializeField] GameObject projectilePrefab, Gun;
-    [SerializeField] float moveSpeed =1f;
+    [SerializeField] float fireRate = 1f;
     public void Fire()
     {
-        Instantiate(projectilePrefab,Gun.transform.position,transform.rotation);
+       StartCoroutine(WaitAndFire());
+    }
+
+    IEnumerator WaitAndFire()
+    {
+        yield return new WaitForSeconds(fireRate);
+        Instantiate(projectilePrefab,Gun.transform.position,Quaternion.identity);
+
     }
 }

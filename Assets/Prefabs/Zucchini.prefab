@@ -10,6 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 994357531058897061}
   - component: {fileID: 331178965008147555}
+  - component: {fileID: 220645234}
+  - component: {fileID: 347422451}
+  - component: {fileID: -4036477432056239985}
+  - component: {fileID: 5719868548824507561}
   m_Layer: 0
   m_Name: Zucchini
   m_TagString: Untagged
@@ -81,3 +85,83 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &220645234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5406215223056138220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb1381f2fc414058849ca66429a1207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+--- !u!114 &347422451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5406215223056138220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfc1bd4b9720c4753bded36d649fcec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinSpeed: 360
+--- !u!60 &-4036477432056239985
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5406215223056138220}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.37333333, y: 0.37333333}
+    newSize: {x: 0.56, y: 0.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.14722538, y: 0.19011688}
+      - {x: -0.18781686, y: 0.17171566}
+      - {x: -0.19241714, y: 0.09241705}
+      - {x: -0.15746617, y: 0.07356711}
+      - {x: -0.095923185, y: 0.039326314}
+      - {x: -0.028855562, y: 0.010533359}
+      - {x: 0.04475653, y: -0.071408644}
+      - {x: 0.123235226, y: -0.1981674}
+      - {x: 0.19701743, y: -0.16826546}
+      - {x: 0.19770133, y: -0.14289472}
+      - {x: 0.18091631, y: -0.07518477}
+      - {x: 0.11883104, y: 0.025965307}
+      - {x: 0.0687865, y: 0.07788898}
+      - {x: 0.0018439293, y: 0.14899315}
+      - {x: -0.04806924, y: 0.17884992}
+      - {x: -0.12808824, y: 0.19586727}
+--- !u!114 &5719868548824507561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5406215223056138220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6504b810c87264b12ad1e20ee8a76551, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageDone: 100
