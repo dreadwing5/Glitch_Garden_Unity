@@ -5,6 +5,11 @@ using UnityEngine;
 public class DefenderButton : MonoBehaviour
 {
     SpriteRenderer m_SpriteRender;
+    SpawnDefender spawnDefender;
+    private void Start() {
+      spawnDefender = FindObjectOfType<SpawnDefender>();
+    }
+    [SerializeField] public Defenders defenderPrefab; //Select which defender to spawn
     private void OnMouseDown()
     {
         /*  At the start both button becomes inactive but the button we clicked will become active
@@ -21,6 +26,9 @@ public class DefenderButton : MonoBehaviour
         {
             button.GetComponent<SpriteRenderer>().color = new Color32(75, 62, 62, 255); /* both buttons are inactive */
         }
+        //Pass the selected defender for spawning
+        spawnDefender.SetSelectedDefender(defenderPrefab);
+
         m_SpriteRender = GetComponent<SpriteRenderer>();
         m_SpriteRender.color = Color.white;  /* The button is active */
 
