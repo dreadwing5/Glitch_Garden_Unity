@@ -33,7 +33,7 @@ public class Health : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, deathSFXVolume);
         GameObject DeathVFX = Instantiate(deathVFX, transform.position, Quaternion.identity) as GameObject;
-        Destroy(DeathVFX,1f);
+        Destroy(DeathVFX, 1f);
     }
 
 }
